@@ -1,0 +1,6 @@
+{
+  "name": "Student Registration System",
+  "description": "Full-stack Student Registration application with React frontend and Node.js Express backend API, including Student ID, Major, and Graduation Year management.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

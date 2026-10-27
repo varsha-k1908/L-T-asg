@@ -1,0 +1,62 @@
+[
+  {
+    "id": "STU-1001",
+    "name": "Alex Rivera",
+    "email": "alex.rivera@university.edu",
+    "phone": "+1 (555) 019-2834",
+    "major": "Computer Science",
+    "graduationYear": 2026,
+    "semester": "Fall 2026",
+    "status": "Active",
+    "gpa": 3.88,
+    "createdAt": "2026-09-01T10:00:00.000Z"
+  },
+  {
+    "id": "STU-1002",
+    "name": "Sophia Chen",
+    "email": "sophia.chen@university.edu",
+    "phone": "+1 (555) 048-7712",
+    "major": "Data Science & AI",
+    "graduationYear": 2027,
+    "semester": "Spring 2027",
+    "status": "Active",
+    "gpa": 3.94,
+    "createdAt": "2026-09-03T11:30:00.000Z"
+  },
+  {
+    "id": "STU-1003",
+    "name": "Marcus Johnson",
+    "email": "marcus.j@university.edu",
+    "phone": "+1 (555) 032-9901",
+    "major": "Electrical Engineering",
+    "graduationYear": 2028,
+    "semester": "Fall 2028",
+    "status": "Active",
+    "gpa": 3.65,
+    "createdAt": "2026-09-05T14:15:00.000Z"
+  },
+  {
+    "id": "STU-1004",
+    "name": "Elena Rostova",
+    "email": "elena.rostova@university.edu",
+    "phone": "+1 (555) 077-4433",
+    "major": "Business Administration",
+    "graduationYear": 2026,
+    "semester": "Spring 2026",
+    "status": "Active",
+    "gpa": 3.79,
+    "createdAt": "2026-09-10T09:20:00.000Z"
+  },
+  {
+    "id": "STU-1005",
+    "name": "David Kim",
+    "email": "david.kim@university.edu",
+    "phone": "+1 (555) 061-8854",
+    "major": "Cybersecurity",
+    "graduationYear": 2029,
+    "semester": "Fall 2029",
+    "status": "Active",
+    "gpa": 3.72,
+    "createdAt": "2026-09-15T16:45:00.000Z"
+  }
+]
