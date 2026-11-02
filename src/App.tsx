@@ -12,7 +12,8 @@ import {
   PlusCircle,
   BarChart3,
   Search,
-  CheckCircle2
+  CheckCircle2,
+  FileText
 } from 'lucide-react';
 import { Student, StatsData } from './types.ts';
 import { StudentForm } from './components/StudentForm.tsx';
@@ -21,11 +22,13 @@ import { StudentCardModal } from './components/StudentCardModal.tsx';
 import { EditStudentModal } from './components/EditStudentModal.tsx';
 import { CodeExportModal } from './components/CodeExportModal.tsx';
 import { MigrationCompareModal } from './components/MigrationCompareModal.tsx';
+import { ProjectFilesExplorer } from './components/ProjectFilesExplorer.tsx';
+import { FolderCheck, FileCode2 } from 'lucide-react';
 
 export default function App() {
   const [students, setStudents] = useState<Student[]>([]);
   const [loading, setLoading] = useState(true);
-  const [activeTab, setActiveTab] = useState<'form' | 'directory' | 'analytics'>('form');
+  const [activeTab, setActiveTab] = useState<'form' | 'directory' | 'analytics' | 'files'>('files');
 
   // Modals state
   const [selectedBadgeStudent, setSelectedBadgeStudent] = useState<Student | null>(null);
@@ -155,6 +158,16 @@ export default function App() {
 
             {/* Quick Actions (Export code, Compare, Reset) */}
             <div className="flex items-center gap-2">
+              <a
+                href="/Student_Registration_and_Management_System_Architecture_Document.docx"
+                download="Student_Registration_and_Management_System_Architecture_Document.docx"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-emerald-700 bg-emerald-50 hover:bg-emerald-100 border border-emerald-300 rounded-xl transition cursor-pointer shadow-xs"
+                title="Download complete Architecture Word document in Times New Roman 12pt"
+              >
+                <FileText className="w-3.5 h-3.5 text-emerald-600" />
+                <span>Architecture (.DOCX)</span>
+              </a>
+
               <button
                 onClick={() => setShowCompareModal(true)}
                 className="hidden md:inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-slate-700 hover:text-indigo-600 bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-xl transition cursor-pointer"
@@ -186,10 +199,25 @@ export default function App() {
           {/* Navigation Bar & Tabs */}
           <div className="flex items-center space-x-1 border-t border-slate-100 py-1">
             <button
+              onClick={() => setActiveTab('files')}
+              className={`flex items-center gap-2 px-3.5 py-2 text-xs font-semibold rounded-lg transition cursor-pointer ${
+                activeTab === 'files'
+                  ? 'bg-indigo-600 text-white shadow-xs'
+                  : 'text-slate-700 hover:text-slate-900 hover:bg-slate-100'
+              }`}
+            >
+              <FolderCheck className="w-3.5 h-3.5 text-emerald-400" />
+              <span>📁 Normal Files &amp; Code Explorer</span>
+              <span className={`px-1.5 py-0.2 text-[9px] font-bold rounded ${activeTab === 'files' ? 'bg-white/20 text-white' : 'bg-emerald-100 text-emerald-700'}`}>
+                Extracted
+              </span>
+            </button>
+
+            <button
               onClick={() => setActiveTab('form')}
               className={`flex items-center gap-2 px-3.5 py-2 text-xs font-semibold rounded-lg transition cursor-pointer ${
                 activeTab === 'form'
-                  ? 'bg-indigo-50 text-indigo-700'
+                  ? 'bg-indigo-50 text-indigo-700 font-bold'
                   : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
               }`}
             >
@@ -201,7 +229,7 @@ export default function App() {
               onClick={() => setActiveTab('directory')}
               className={`flex items-center gap-2 px-3.5 py-2 text-xs font-semibold rounded-lg transition cursor-pointer ${
                 activeTab === 'directory'
-                  ? 'bg-indigo-50 text-indigo-700'
+                  ? 'bg-indigo-50 text-indigo-700 font-bold'
                   : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
               }`}
             >
@@ -213,7 +241,7 @@ export default function App() {
               onClick={() => setActiveTab('analytics')}
               className={`flex items-center gap-2 px-3.5 py-2 text-xs font-semibold rounded-lg transition cursor-pointer ${
                 activeTab === 'analytics'
-                  ? 'bg-indigo-50 text-indigo-700'
+                  ? 'bg-indigo-50 text-indigo-700 font-bold'
                   : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
               }`}
             >
@@ -420,6 +448,8 @@ export default function App() {
             </div>
           </div>
         )}
+
+        {activeTab === 'files' && <ProjectFilesExplorer />}
       </main>
 
       {/* Footer */}

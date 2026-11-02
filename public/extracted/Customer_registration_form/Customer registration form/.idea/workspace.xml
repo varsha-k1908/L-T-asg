@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6c98d253-61b0-482d-9590-1753b5e54498" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../static/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../templates/index.html" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0002645815348767" />
+      <entry key="S2" value="1.1279040392795012" />
+      <entry key="S5" value="1.5313614600584793" />
+      <entry key="S10" value="2.3145600827277293" />
+      <entry key="S30" value="4.380685961627193" />
+      <entry key="S60" value="5.483269323036893" />
+      <entry key="M2" value="6.430883414889756" />
+      <entry key="M5" value="9.414461357373433" />
+      <entry key="M10" value="14.781772949426266" />
+      <entry key="M15" value="20.088117653513272" />
+      <entry key="M30" value="38.72335971052329" />
+      <entry key="H1" value="71.65552323554836" />
+      <entry key="H2" value="108.81327143976658" />
+      <entry key="H4" value="138.84024638999233" />
+      <entry key="D1" value="173.62316224211693" />
+      <entry key="W1" value="180.76981733716582" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="1.0425830734034808E-109" />
+      <entry key="MS500" value="1.5981669084726796E-22" />
+      <entry key="S2" value="3.555539710595009E-6" />
+      <entry key="S5" value="0.00661244714144272" />
+      <entry key="S10" value="0.0813169548216337" />
+      <entry key="S30" value="0.43329481788464336" />
+      <entry key="S60" value="0.6677377218063975" />
+      <entry key="M2" value="0.9454595658218233" />
+      <entry key="M5" value="1.64445080274499" />
+      <entry key="M10" value="2.461085274816928" />
+      <entry key="M15" value="3.383513508978141" />
+      <entry key="M30" value="7.113757774607337" />
+      <entry key="H1" value="13.750606130196585" />
+      <entry key="H2" value="21.35243998767848" />
+      <entry key="H4" value="27.662721292443127" />
+      <entry key="D1" value="35.164448523111325" />
+      <entry key="W1" value="36.72977010678181" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="1.5381636921103666E-11" />
+      <entry key="MS500" value="0.006885257401468724" />
+      <entry key="S2" value="0.34182752221325247" />
+      <entry key="S5" value="1.0058799884189447" />
+      <entry key="S10" value="2.0195093747141657" />
+      <entry key="S30" value="4.605344089442099" />
+      <entry key="S60" value="6.023628275934136" />
+      <entry key="M2" value="7.302629213878917" />
+      <entry key="M5" value="11.019783892286572" />
+      <entry key="M10" value="17.215626800339944" />
+      <entry key="M15" value="23.44795232654489" />
+      <entry key="M30" value="45.81505562824905" />
+      <entry key="H1" value="85.3863041783624" />
+      <entry key="H2" value="130.1509476031719" />
+      <entry key="H4" value="166.4936392017257" />
+      <entry key="D1" value="208.78568058268607" />
+      <entry key="W1" value="217.4993006776369" />
+    </decayedShown>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3KRTFadnUQ8klryxrUYlUThoktH" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "JavaScript Debug.products.html.executor": "Run",
+    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Smart Tomcat.Tomcat.executor": "Run",
+    "Smart Tomcat.Tomcat: ems.executor": "Run",
+    "Smart Tomcat.tomcat.executor": "Run",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.jshint": "true",
+    "node.js.selected.package.jshint": "",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.3034591",
+    "python.packages.toolwindow.project.migrated.to.right.top.v2": "true",
+    "settings.editor.selected.configurable": "com.poratu.idea.plugins.tomcat.setting.TomcatServersConfigurable"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="Tomcat" type="com.poratu.idea.plugins.tomcat">
+      <predefined_log_file enabled="true" id="Tomcat Localhost Log" />
+      <predefined_log_file enabled="true" id="Tomcat Access Log" />
+      <predefined_log_file id="Tomcat Catalina Log" />
+      <predefined_log_file id="Tomcat Manager Log" />
+      <predefined_log_file id="Tomcat Host Manager Log" />
+      <option name="catalinaBase" value="" />
+      <option name="contextPath" value="/ems" />
+      <option name="docBase" value="$PROJECT_DIR$/src/main/webapp" />
+      <option name="envOptions">
+        <map />
+      </option>
+      <option name="extraClassPath" value="" />
+      <option name="tomcatInfo">
+        <TomcatInfo>
+          <option name="name" value="Apache Tomcat/11.0.26" />
+          <option name="path" value="$PROJECT_DIR$/../apache-tomcat-11.0.26" />
+          <option name="version" value="11.0.26.0" />
+        </TomcatInfo>
+      </option>
+      <option name="vmOptions" value="" />
+      <module name="ems" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tomcat" type="com.poratu.idea.plugins.tomcat">
+      <predefined_log_file enabled="true" id="Tomcat Localhost Log" />
+      <predefined_log_file enabled="true" id="Tomcat Access Log" />
+      <predefined_log_file id="Tomcat Catalina Log" />
+      <predefined_log_file id="Tomcat Manager Log" />
+      <predefined_log_file id="Tomcat Host Manager Log" />
+      <option name="catalinaBase" value="" />
+      <option name="contextPath" value="/ems" />
+      <option name="docBase" value="$PROJECT_DIR$/src/main/webapp" />
+      <option name="envOptions">
+        <map />
+      </option>
+      <option name="extraClassPath" value="" />
+      <option name="tomcatInfo">
+        <TomcatInfo>
+          <option name="name" value="Apache Tomcat/11.0.26" />
+          <option name="path" value="$PROJECT_DIR$/../apache-tomcat-11.0.26" />
+          <option name="version" value="11.0.26.0" />
+        </TomcatInfo>
+      </option>
+      <option name="vmOptions" value="" />
+      <module name="ems" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-a203e0a19954-intellij.indexing.shared.core-IU-262.10968.63" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.10968.63" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6c98d253-61b0-482d-9590-1753b5e54498" name="Changes" comment="" />
+      <created>1791519279509</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1791519279509</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

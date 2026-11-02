@@ -379,6 +379,99 @@ async function startServer() {
     }
   });
 
+  // 9. Full project files directory listing
+  const ALLOWED_PROJECT_FILES: { path: string; name: string; category: string; language: string; description: string }[] = [
+    { path: 'server.ts', name: 'server.ts', category: 'Backend & API', language: 'typescript', description: 'Full-stack Express REST API with CRUD routes & validation' },
+    { path: 'student_registration_single_file.js', name: 'student_registration_single_file.js', category: 'Backend & API', language: 'javascript', description: 'Zero-dependency standalone executable with embedded UI & REST API' },
+    { path: 'schema.sql', name: 'schema.sql', category: 'Database', language: 'sql', description: 'Ready-to-run MySQL & PostgreSQL database schema with sample data' },
+    { path: 'data/students.json', name: 'students.json', category: 'Database', language: 'json', description: 'Persistent JSON database storing enrolled student profiles' },
+    { path: 'src/App.tsx', name: 'App.tsx', category: 'Frontend', language: 'typescript', description: 'Main React application with tabs, stats, and registration portal' },
+    { path: 'src/types.ts', name: 'types.ts', category: 'Frontend', language: 'typescript', description: 'Student interfaces, department constants, and API type definitions' },
+    { path: 'src/components/StudentForm.tsx', name: 'StudentForm.tsx', category: 'Frontend', language: 'typescript', description: 'Student registration form with validation and preset majors' },
+    { path: 'src/components/StudentList.tsx', name: 'StudentList.tsx', category: 'Frontend', language: 'typescript', description: 'Student directory table and cards with real-time search and filters' },
+    { path: 'src/components/StudentCardModal.tsx', name: 'StudentCardModal.tsx', category: 'Frontend', language: 'typescript', description: 'Digital student ID badge modal with photo avatar and print option' },
+    { path: 'src/components/EditStudentModal.tsx', name: 'EditStudentModal.tsx', category: 'Frontend', language: 'typescript', description: 'Modal dialog to edit existing student attributes' },
+    { path: 'src/components/MigrationCompareModal.tsx', name: 'MigrationCompareModal.tsx', category: 'Documentation', language: 'typescript', description: 'Architecture comparison between Tomcat Java Servlet and React + Node' },
+    { path: 'public/Student_Registration_and_Management_System_Architecture_Document.docx', name: 'Student_Registration_Architecture.docx', category: 'Documentation', language: 'docx', description: 'System Architecture Word Document in Times New Roman 12pt (L&T EduTech Activity)' },
+    { path: 'package.json', name: 'package.json', category: 'Configuration', language: 'json', description: 'Project dependencies, build scripts, and server configuration' },
+    { path: 'README.md', name: 'README.md', category: 'Documentation', language: 'markdown', description: 'Project overview, converted fields table, and execution instructions' },
+    { path: '.env.example', name: '.env.example', category: 'Configuration', language: 'shell', description: 'Environment variable template (PORT, etc.)' },
+    { path: 'tsconfig.json', name: 'tsconfig.json', category: 'Configuration', language: 'json', description: 'TypeScript compiler configuration' },
+    { path: 'vite.config.ts', name: 'vite.config.ts', category: 'Configuration', language: 'typescript', description: 'Vite build tool configuration' },
+    { path: 'index.html', name: 'index.html', category: 'Frontend', language: 'html', description: 'HTML entry point with Tailwind CSS and responsive meta tags' }
+  ];
+
+  app.get('/api/project-files', (_req: Request, res: Response) => {
+    const list = ALLOWED_PROJECT_FILES.map((f) => {
+      const fullPath = path.join(__dirname, f.path);
+      let size = 0;
+      let exists = false;
+      if (fs.existsSync(fullPath)) {
+        exists = true;
+        size = fs.statSync(fullPath).size;
+      }
+      return {
+        ...f,
+        exists,
+        size
+      };
+    });
+    res.json({ success: true, files: list });
+  });
+
+  // 10. Fetch single file content safely
+  app.get('/api/file-content', (req: Request, res: Response) => {
+    const relPath = String(req.query.path || '').trim();
+    if (!relPath) {
+      return res.status(400).json({ success: false, message: 'Missing file path parameter' });
+    }
+
+    // Security check: ensure path is inside workspace and in allowed list or extracted folder
+    const normalized = path.normalize(relPath).replace(/^[\\\/]+/, '');
+    if (normalized.includes('..') || path.isAbsolute(normalized)) {
+      return res.status(403).json({ success: false, message: 'Invalid file path' });
+    }
+
+    const fullPath = path.join(__dirname, normalized);
+    if (!fs.existsSync(fullPath) || fs.statSync(fullPath).isDirectory()) {
+      return res.status(404).json({ success: false, message: 'File not found' });
+    }
+
+    try {
+      const content = fs.readFileSync(fullPath, 'utf-8');
+      res.json({
+        success: true,
+        path: normalized,
+        name: path.basename(normalized),
+        content,
+        size: fs.statSync(fullPath).size
+      });
+    } catch (err: any) {
+      res.status(500).json({ success: false, message: err.message });
+    }
+  });
+
+  // 11. Download single file directly
+  app.get('/api/download-file', (req: Request, res: Response) => {
+    const relPath = String(req.query.path || '').trim();
+    if (!relPath) {
+      return res.status(400).send('Missing file path');
+    }
+
+    const normalized = path.normalize(relPath).replace(/^[\\\/]+/, '');
+    if (normalized.includes('..') || path.isAbsolute(normalized)) {
+      return res.status(403).send('Invalid file path');
+    }
+
+    const fullPath = path.join(__dirname, normalized);
+    if (!fs.existsSync(fullPath) || fs.statSync(fullPath).isDirectory()) {
+      return res.status(404).send('File not found');
+    }
+
+    const filename = path.basename(normalized);
+    res.download(fullPath, filename);
+  });
+
   // ==========================================
   // Vite Integration (Dev) or Static (Prod)
   // ==========================================
